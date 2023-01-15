@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: blog
-          image: ghcr.io/mharikmert/blog:v0.0.15 # {"$imagepolicy": "flux-system:blog-image-repository"}
+          image: ghcr.io/mharikmert/blog:v0.0.15 # {"$imagepolicy": "flux-system:blog-image-policy"}
 ---
 apiVersion: v1
 kind: Service
