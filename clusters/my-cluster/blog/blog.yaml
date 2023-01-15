@@ -11,11 +11,11 @@ spec:
   template:
     metadata:
       labels:
-          app: blog
+        app: blog
     spec:
       containers:
-      - name: blog
-        image: ghcr.io/mharikmert/blog:v0.0.15
+        - name: blog
+          image: ghcr.io/mharikmert/blog:v0.0.15 # {"$imagepolicy": "flux-system:blog-image-repository"}
 ---
 apiVersion: v1
 kind: Service
@@ -25,7 +25,7 @@ metadata:
 spec:
   type: ClusterIP
   ports:
-  - port: 80
-    targetPort: 80
+    - port: 80
+      targetPort: 80
   selector:
-      app: blog
+    app: blog
